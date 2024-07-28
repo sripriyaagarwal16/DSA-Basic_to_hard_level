@@ -1,6 +1,5 @@
 #include<iostream>
 #include<queue>
-#include<vector>
 using namespace std;
 template <typename T>
 class BinaryTreeNode{
@@ -85,41 +84,11 @@ void printtree(BinaryTreeNode<int>*root){
     printtree(root->left);
     printtree(root->right);
 }
-vector<int>*roottonodeepath(BinaryTreeNode<int>*root,int n ){
-    vector<int>*result=new vector<int>();
-    if(root==NULL){
-      return result;
-    }
-    if(root->data==n){
-        result->push_back(root->data);
-        return result;
-    }
-    vector<int>*leftoutput=roottonodeepath(root->left,n );
-    if(leftoutput!=NULL){
-        leftoutput->push_back(root->data);
-        return leftoutput;
-    }
+void printpath(const vector<int>&path){
+    for(int i =0;i<path.size();i++){
+        cout<<path[i]<<" ";
 
-    vector<int>*rightoutput=roottonodeepath(root->right,n );
-    if(rightoutput!=NULL){
-        rightoutput->push_back(root->data);
-        return rightoutput;
     }
-    else{
-        return NULL;
-    }
-
+    
 }
-int main(){
-    BinaryTreeNode<int>*root= takeinputlevelwise();
-    int  n;
-    cout<<"Enter the number you want to search";
-    cin>>n;
-    vector<int>*result=roottonodeepath(root, n );
-    for(int i =0;i<result->size();i++){
-        cout<<"The root to node path is "<<endl;
-        cout<<result->at(i)<<endl;
-    }
-
-
-}
+//to be done after I will complete graphs 

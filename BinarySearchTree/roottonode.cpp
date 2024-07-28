@@ -1,6 +1,5 @@
 #include<iostream>
 #include<queue>
-#include<vector>
 using namespace std;
 template <typename T>
 class BinaryTreeNode{
@@ -85,41 +84,35 @@ void printtree(BinaryTreeNode<int>*root){
     printtree(root->left);
     printtree(root->right);
 }
-vector<int>*roottonodeepath(BinaryTreeNode<int>*root,int n ){
-    vector<int>*result=new vector<int>();
-    if(root==NULL){
-      return result;
-    }
-    if(root->data==n){
-        result->push_back(root->data);
-        return result;
-    }
-    vector<int>*leftoutput=roottonodeepath(root->left,n );
-    if(leftoutput!=NULL){
-        leftoutput->push_back(root->data);
-        return leftoutput;
-    }
+void printpath(const vector<int>&path){
+    for(int i =0;i<path.size();i++){
+        cout<<path[i]<<" ";
 
-    vector<int>*rightoutput=roottonodeepath(root->right,n );
-    if(rightoutput!=NULL){
-        rightoutput->push_back(root->data);
-        return rightoutput;
     }
-    else{
-        return NULL;
+    
+}
+void printroottoleafpathhelper(BinaryTreeNode<int>*root,int k ,vector<int>&path,int currentsum){
+    if(root==NULL){
+        return ;
     }
+    currentsum+=root->data;
+    path.push_back(root->data);
+    if(root->left==NULL&&root->right==NULL&&currentsum==k){
+        printpath(path);
+    }
+    printroottoleafpathhelper(root->left,k ,path,currentsum);
+    printroottoleafpathhelper(root->right,k ,path,currentsum);
+    path.pop_back();
+}
+void printtoleafpath(BinaryTreeNode<int>*root,int k){
+    vector<int>path;
+    printroottoleafpathhelper(root,k ,path,0);
 
 }
 int main(){
-    BinaryTreeNode<int>*root= takeinputlevelwise();
-    int  n;
-    cout<<"Enter the number you want to search";
-    cin>>n;
-    vector<int>*result=roottonodeepath(root, n );
-    for(int i =0;i<result->size();i++){
-        cout<<"The root to node path is "<<endl;
-        cout<<result->at(i)<<endl;
-    }
-
-
+    BinaryTreeNode<int>*root=takeinputlevelwise();
+    int k ;
+    cout<<"enter the number"<<endl;
+    cin>>k;
+    printtoleafpath(root,k);
 }

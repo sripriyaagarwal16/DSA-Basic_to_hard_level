@@ -1,6 +1,7 @@
+#include<climits>
+
 #include<iostream>
 #include<queue>
-#include<vector>
 using namespace std;
 template <typename T>
 class BinaryTreeNode{
@@ -69,57 +70,40 @@ BinaryTreeNode<int>* takeinputlevelwise(){
     }
     return root;
 }
-//print tree 
-void printtree(BinaryTreeNode<int>*root){
-    if(root==NULL){
-        return ;
-    }
-    cout<<root->data<<":"<<endl;
-    if(root->left!=NULL){
-         cout<<"L"<<" "<<":"<<root->left->data<<" ";
-    }
-    if(root->right!=NULL){
-        cout<<"R"<<" "<<":"<<root->right->data;
-    }
-    cout<<endl;
-    printtree(root->left);
-    printtree(root->right);
+class solution{
+	public:
+	int minimum ;
+	int maximum ;
+	int height; 
+	bool isBST;
+};
+solution largestBSTSubtreehelper(BinaryTreeNode<int> *root) {
+    // Write your code here
+	if(root==NULL){
+		solution output;
+		output.minimum=INT_MAX;
+		output.maximum=INT_MIN;
+		output.height=0;
+		output.isBST=true;
+		return output;
+	}
+	
+   solution lefttree= largestBSTSubtreehelper(root->left);
+   solution righttree= largestBSTSubtreehelper(root->right);
+   solution output;
+   output.minimum=min(root->data,min(lefttree.minimum,righttree.minimum));
+   output.maximum=max(root->data,max(lefttree.maximum,righttree.maximum));
+   if(root->data>lefttree.maximum&&root->data<=righttree.minimum&&lefttree.isBST&&righttree.isBST){
+	   output.isBST=true;
+	   output.height=max(lefttree.height,righttree.height)+1;
+   }else{
+	   output.isBST=false;
+	   output.height=max(lefttree.height,righttree.height);
+   }
+   return output;
 }
-vector<int>*roottonodeepath(BinaryTreeNode<int>*root,int n ){
-    vector<int>*result=new vector<int>();
-    if(root==NULL){
-      return result;
-    }
-    if(root->data==n){
-        result->push_back(root->data);
-        return result;
-    }
-    vector<int>*leftoutput=roottonodeepath(root->left,n );
-    if(leftoutput!=NULL){
-        leftoutput->push_back(root->data);
-        return leftoutput;
-    }
-
-    vector<int>*rightoutput=roottonodeepath(root->right,n );
-    if(rightoutput!=NULL){
-        rightoutput->push_back(root->data);
-        return rightoutput;
-    }
-    else{
-        return NULL;
-    }
-
+int largestBSTSubtree(BinaryTreeNode<int> *root){
+	solution answer=largestBSTSubtreehelper(root);
+	return answer.height;
 }
-int main(){
-    BinaryTreeNode<int>*root= takeinputlevelwise();
-    int  n;
-    cout<<"Enter the number you want to search";
-    cin>>n;
-    vector<int>*result=roottonodeepath(root, n );
-    for(int i =0;i<result->size();i++){
-        cout<<"The root to node path is "<<endl;
-        cout<<result->at(i)<<endl;
-    }
 
-
-}

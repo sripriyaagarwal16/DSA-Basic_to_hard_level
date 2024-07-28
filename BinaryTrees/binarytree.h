@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-template<typname T>
+template<typename T>
 class BinaryTreeNode{
     public:
     T data;

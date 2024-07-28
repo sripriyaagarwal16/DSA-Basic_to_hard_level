@@ -21,6 +21,7 @@ class BinaryTreeNode{
     }
 
 };
+template <typename T>
 class Node{
     public:
     T data;
@@ -29,7 +30,7 @@ class Node{
         this->data=data;
         next=NULL;
     }
-}
+};
 //taking input level wise
 BinaryTreeNode<int>* takeinputlevelwise(){
     int rootdata;
@@ -97,11 +98,11 @@ vector<Node<int>>*linkedlistlevelwise(BinaryTreeNode<int>*root){
         return NULL;
     }
     vector<Node<int>>*result;
-    queue<BinaryTreeNode<int>>*p;
+    queue<BinaryTreeNode<int>>p;
    
     p.push(root);
     while(!p.empty()){
-        levelsize=p.size();
+        int levelsize=p.size();
         Node<int>*levelhead=NULL;
         Node<int>*leveltail=NULL;
         for(int i =0;i<levelsize;i++){
