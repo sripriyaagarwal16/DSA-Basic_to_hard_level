@@ -298,5 +298,472 @@ function merge(leftHalf, rightHalf):
 ### Space Complexity
 * O(n)
 
+## 3.10 Tree Data Structure
+
+Having covered the basics of linear data structures, let's delve into non-linear structures, starting with the Tree.
+
+The Tree data structure resembles an inverted tree from nature, featuring a root and leaves. The root is the initial node, and the leaves are at the bottom-most level. Notably, there's only one path between any two nodes in a tree.
+
+<!-- img -->
+
+Based on the maximum number of children a node can have:
+
+- **Binary Tree:** Each node can have a maximum of 2 children.
+- **Ternary Tree:** Each node can have a maximum of 3 children.
+- **N-ary Tree:** A node can have at most N children.
+
+Additional classifications based on node configuration include:
+
+- **Complete Binary Tree:** All levels are filled, except possibly for the last level, which is filled from the left as much as possible.
+- **Perfect Binary Tree:** All levels are filled.
+- **Binary Search Tree:** A special binary tree where smaller nodes are on the left, and higher value nodes are on the right.
+- **Ternary Search Tree:** Similar to a binary search tree, but with nodes having at most 3 children.
+
+<details open>
+  <summary><b>Resources: Trees</b></summary>
+  <table>
+  <tbody>
+    <tr>
+      <td><p>◌ <b>Tree Data Structure</b></p></td>
+      <td><a target="_blank" href="https://www.geeksforgeeks.org/tree-data-structure/"><b>geeksforgeeks.org</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Heaps (priority queue)</b></p></td>
+      <td><a target="_blank" href="https://www.geeksforgeeks.org/binary-heap/"><b>viterbi-web.usc.edu</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Heaps</b></p></td>
+      <td><a target="_blank" href="https://visualgo.net/en/heap?slide=1"><b>visualgo.net</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Priority Queues: Lecture Notes</b></p></td>
+      <td><a target="_blank" href="https://www.cs.cmu.edu/~wlovas/15122-r11/lectures/15-priorqs.pdf"><b>cs.cmu.edu</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>UNION-FIND DISJOINT SETS (UFDS)</b></p></td>
+      <td><a target="_blank" href="https://visualgo.net/en/ufds"><b>visualgo.net</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>DISJOINT-SET DATA STRUCTURES</b></p></td>
+      <td><a target="_blank" href="https://www.topcoder.com/thrive/articles/Disjoint-set%20Data%20Structures"><b>topcoder.com</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Disjoint set (Union-Find): Lecture Notes</b></p></td>
+      <td><a target="_blank" href="https://people.cs.georgetown.edu/jthaler/ANLY550/lec6.pdf"><b>harvard.edu</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Segment Trees: MIN SEGMENT TREE</b></p></td>
+      <td><a target="_blank" href="https://visualgo.net/en/segmenttree?slide=1"><b>visualgo.net</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>RANGE MINIMUM QUERY AND LOWEST COMMON ANCESTOR</b></p></td>
+      <td><a target="_blank" href="https://www.topcoder.com/thrive/articles/Range%20Minimum%20Query%20and%20Lowest%20Common%20Ancestor"><b>topcoder.com</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Segment Trees</b></p></td>
+      <td><a target="_blank" href="https://www.iarcs.org.in/inoi/online-study-material/topics/segment-tree.php"><b>iarcs.org.in</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>BINARY INDEXED TREES: TopCoder</b></p></td>
+      <td><a target="_blank" href="https://www.topcoder.com/thrive/articles/Binary%20Indexed%20Trees"><b>topcoder.com</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Binary Index Tree (Fenwick tree)</b></p></td>
+      <td><a target="_blank" href="https://visualgo.net/en/fenwicktree?slide=1"><b>visualgo.net</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Binary Index Tree: ICO</b></p></td>
+      <td><a target="_blank" href="https://www.iarcs.org.in/inoi/online-study-material/topics/binary-index-tree.php"><b>iarcs.org.in</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Trees (traversals)</b></p></td>
+      <td><a target="_blank" href="https://people.eecs.berkeley.edu/~vazirani/s99cs170/notes/dynamic2.pdf"><b>berkeley.edu</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Dynamic programming on trees</b></p></td>
+      <td><a target="_blank" href="https://www.iarcs.org.in/inoi/online-study-material/topics/dp-trees.php"><b>iarcs.org.in</b></a></td>
+    </tr>
+  </tbody>
+</table>
+</details>
+
+<details open>
+  <summary><b>Practice Problems: Trees</b></summary>
+  <table>
+  <tbody>
+    <tr>
+      <td><a target="_blank" href="https://leetcode.com/tag/tree/"><b>Leetcode: Practice Trees</b></a></td>
+    </tr>
+    <tr>
+      <td><a target="_blank" href="https://leetcode.com/tag/heap-priority-queue/"><b>Leetcode: Practice Heap (Priority Queue)</b></a></td>
+    </tr>
+    <tr>
+      <td><a target="_blank" href="https://leetcode.com/tag/union-find/"><b>Leetcode: Practice Segment Tree</b></a></td>
+    </tr>
+    <tr>
+      <td><a target="_blank" href="https://leetcode.com/tag/segment-tree/"><b>Leetcode: Practice Union Find</b></a></td>
+    </tr>
+    <tr>
+      <td><a target="_blank" href="https://leetcode.com/tag/binary-indexed-tree/"><b>Leetcode: Practice Binary Indexed Tree</b></a></td>
+    </tr>
+    <tr>
+      <td><a target="_blank" href="https://leetcode.com/tag/depth-first-search/"><b>Leetcode: Practice Depth-First Search</b></a></td>
+    </tr>
+    <tr>
+      <td><a target="_blank" href="https://leetcode.com/tag/breadth-first-search/"><b>Leetcode: Practice Breadth-First Search</b></a></td>
+    </tr>
+    <tr>
+      <td><a target="_blank" href="https://leetcode.com/tag/binary-search-tree/"><b>Leetcode: Practice Binary Search Tree</b></a></td>
+    </tr>
+    <tr>
+      <td><a target="_blank" href="https://leetcode.com/tag/trie/"><b>Leetcode: Practice Trie</b></a></td>
+    </tr>
+  </tbody>
+</table>
+</details>
+
+[**Back To Top ⬆️**](#index)
+
+## 3.11 Graph Data Structure
+
+Moving on to another crucial non-linear structure, let's explore the Graph. Unlike the Tree, a Graph lacks a specific root or leaf node and allows traversal in any order.
+
+A Graph is a non-linear structure composed of a finite set of vertices (or nodes) and a set of edges connecting pairs of nodes. It proves invaluable in solving various real-life problems. Graphs can take different forms based on edge orientation and node characteristics.
+
+<!-- img -->
+
+Key concepts to explore:
+
+- **Types of Graphs:** Varying types based on connectivity or weights of nodes.
+- **Introduction to BFS and DFS:** Algorithms for traversing through a graph.
+- **Cycles in a Graph:** Series of connections leading to a loop.
+- **Topological Sorting in the Graph**
+- **Minimum Spanning Tree in Graph**
+
+<details open>
+  <summary><b>Resources: Graphs</b></summary>
+  <table>
+  <tbody>
+    <tr>
+      <td><p>◌ <b>Graph Data Structure And Algorithms</b></p></td>
+      <td><a target="_blank" href="https://www.geeksforgeeks.org/graph-data-structure-and-algorithms/"><b>geeksforgeeks.org</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Depth First Search or DFS for a Graph</b></p></td>
+      <td><a target="_blank" href="https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/"><b>geeksforgeeks.org</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>GRAPH TRAVERSAL (DFS/BFS)</b></p></td>
+      <td><a target="_blank" href="https://visualgo.net/en/dfsbfs"><b>visualgo.net</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Dijkstra’s shortest path algorithm<h/b></p></td>
+      <td><a target="_blank" href="http://www.geeksforgeeks.org/greedy-algorithms-set-6-dijkstras-shortest-path-algorithm/"><b>geeksforgeeks.org</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>SINGLE-SOURCE SHORTEST PATHS</b></p></td>
+      <td><a target="_blank" href="https://visualgo.net/en/sssp"><b>visualgo.net</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Bellman Ford Algorithm</b></p></td>
+      <td><a target="_blank" href="http://www.geeksforgeeks.org/dynamic-programming-set-23-bellman-ford-algorithm/"><b>geeksforgeeks.org</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>One Source Shortest Path</b></p></td>
+      <td><a target="_blank" href="https://compprog.wordpress.com/2007/11/29/one-source-shortest-path-the-bellman-ford-algorithm/"><b>compprog.wordpress.com</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Minimum spanning tree</b></p></td>
+      <td><a target="_blank" href="https://www.cs.princeton.edu/courses/archive/fall19/cos226/lectures/43MinimumSpanningTrees.pdf"><b>cs.princeton.edu</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Articulation points</b></p></td>
+      <td><a target="_blank" href="https://www.iarcs.org.in/inoi/online-study-material/topics/articulation-points.php"><b>iarcs.org.in</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Strongly connected components</b></p></td>
+      <td><a target="_blank" href="https://www.iarcs.org.in/inoi/online-study-material/topics/scc.php"><b>iarcs.org.in</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Topological Sorting</b></p></td>
+      <td><a target="_blank" href="https://www.geeksforgeeks.org/topological-sorting/"><b>geeksforgeeks.org</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Euler Paths and Euler Circuits</b></p></td>
+      <td><a target="_blank" href="https://jlmartin.ku.edu/~jlmartin/courses/math105-F11/Lectures/chapter5-part2.pdf"><b>jlmartin.ku.edu</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Fast Modulo Multiplication</b></p></td>
+      <td><a target="_blank" href="https://discuss.codechef.com/t/a-tutorial-on-fast-modulo-multiplication-exponential-squaring/2899"><b>codechef.com</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Algos for Calculating nCr % M</b></p></td>
+      <td><a target="_blank" href="https://discuss.codechef.com/t/best-known-algos-for-calculating-ncr-m/896"><b>codechef.com</b></a></td>
+    </tr>
+  </tbody>
+</table>
+</details>
+
+<details open>
+  <summary><b>Practice Problems: Graphs</b></summary>
+  <table>
+  <tbody>
+    <tr>
+      <td><p>◌ <b>Two Closest</b></p></td>
+      <td><a target="_blank" href="https://www.codechef.com/problems/PAIRCLST"><b>codechef.com: PAIRCLST</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Special Shortest Walk</b></p></td>
+      <td><a target="_blank" href="https://www.codechef.com/problems/SPSHORT"><b>codechef.com: SPSHORT</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Robot Control</b></p></td>
+      <td><a target="_blank" href="https://codeforces.com/problemset/problem/346/D"><b>codeforces.com: 346/D</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Arbitrage</b></p></td>
+      <td><a target="_blank" href="https://www.spoj.com/problems/ARBITRAG/"><b>spoj.com: ARBITRAG</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Cost</b></p></td>
+      <td><a target="_blank" href="https://www.spoj.com/problems/HIGHWAYS/"><b>spoj.com: HIGHWAYS</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Police Query</b></p></td>
+      <td><a target="_blank" href="https://www.spoj.com/problems/POLQUERY/"><b>spoj.com: POLQUERY</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Visiting Friends</b></p></td>
+      <td><a target="_blank" href="https://www.spoj.com/problems/MCO16405/"><b>codechef.com: MCO16405</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Chef and Roads</b></p></td>
+      <td><a target="_blank" href="https://www.codechef.com/problems/CL16BF/"><b>codechef.com: CL16BF</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Codechef Password Recovery</b></p></td>
+      <td><a target="_blank" href="https://www.codechef.com/problems/CHEFPASS/"><b>codechef.com: CHEFPASS</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Tanya and Password</b></p></td>
+      <td><a target="_blank" href="https://codeforces.com/contest/508/problem/D"><b>codeforces.com: contest/508/problem/D</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>One-Way Reform</b></p></td>
+      <td><a target="_blank" href="https://codeforces.com/contest/723/problem/E"><b>codeforces.com: contest/723/problem/E</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Problem Statement for NetworkSecurity</b></p></td>
+      <td><a target="_blank" href="https://community.topcoder.com/stat?c=problem_statement&pm=10736"><b>topcoder.com</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Leetcode: Interview Practice</b></p></td>
+      <td><a target="_blank" href="https://leetcode.com/tag/graph/"><b>Leetcode: Practice Graphs</b></a></td>
+    </tr>
+  </tbody>
+</table>
+</details>
+
+[**Back To Top ⬆️**](#index)
+
+## 3.12 Recursion
+
+Recursion stands out as a vital algorithm leveraging the concept of code reusability and repeated code usage. Its significance extends to being the foundation for many other algorithms, including:
+
+<!-- img -->
+
+- Tree Traversals
+- Graph Traversals
+- Divide and Conquer Algorithms
+- Backtracking Algorithms
+
+To explore Recursion thoroughly, refer to the following articles/links:
+
+<details open>
+  <summary><b>Resources: Recursion</b></summary>
+  <table>
+  <tbody>
+    <tr>
+      <td><p>◌ <b>AN INTRODUCTION TO RECURSION PART ONE</b></p></td>
+      <td><a target="_blank" href="https://www.topcoder.com/thrive/articles/An%20Introduction%20to%20Recursion%20Part%20One"><b>topcoder.com</b></a></td>
+    </tr>
+    <tr>
+    <tr>
+      <td><p>◌ <b>AN INTRODUCTION TO RECURSION PART TWO</b></p></td>
+      <td><a target="_blank" href="https://www.topcoder.com/thrive/articles/An%20Introduction%20to%20Recursion%20Part%20Two"><b>topcoder.com</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Introduction to Recursion</b></p></td>
+      <td><a target="_blank" href="https://www.geeksforgeeks.org/introduction-to-recursion-data-structure-and-algorithm-tutorials/"><b>geeksforgeeks.org</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Backtracking, Memoization & Dynamic Programming!</b></p></td>
+      <td><a target="_blank" href="https://loveforprogramming.quora.com/Backtracking-Memoization-Dynamic-Programming"><b>loveforprogramming.quora.com</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Recursion Interview Questions & Tips</b></p></td>
+      <td><a target="_blank" href="https://interviewing.io/recursion-interview-questions"><b>interviewing.io</b></a></td>
+    </tr>
+  </tbody>
+</table>
+</details>
+
+<details open>
+  <summary><b>Practice Problems: Recursion</b></summary>
+  <table>
+  <tbody>
+    <tr>
+      <td><p>◌ <b>Connecting Soldiers</b></p></td>
+      <td><a target="_blank" href="https://www.codechef.com/problems/NOKIA"><b>codechef.com: NOKIA</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Fit Squares in Triangle</b></p></td>
+      <td><a target="_blank" href="https://www.codechef.com/problems/TRISQ"><b>codechef.com: TRISQ</b></a></td>
+    </tr>
+    <tr>
+    <tr>
+      <td><p>◌ <b>Leetcode: Interview Practice</b></p></td>
+      <td><a target="_blank" href="https://leetcode.com/tag/recursion/"><b>Leetcode: Practice Recursion</b></a></td>
+    </tr>
+  </tbody>
+</table>
+</details>
+
+## 3.13 Backtracking Algorithm
+
+Derived from Recursion, the Backtracking algorithm allows for retracing if a recursive solution fails, exploring alternative solutions. It systematically tries out all possible solutions to find the correct one.
+
+Backtracking is an algorithmic technique that incrementally builds a solution, removing failed solutions that don't meet problem constraints.
+
+<!-- img -->
+
+Key problems to tackle in Backtracking algorithms:
+
+- **Knight’s Tour Problem**
+- **Rat in a Maze**
+- **N-Queen Problem**
+- **Subset Sum Problem**
+- **M-Coloring Problem**
+- **Hamiltonian Cycle**
+- **Sudoku**
+
+<details open>
+  <summary><b>Resources: Backtracking</b></summary>
+  <table>
+  <tbody>
+    <tr>
+      <td><p>◌ <b>Backtracking Algorithms</b></p></td>
+      <td><a target="_blank" href="https://www.geeksforgeeks.org/backtracking-algorithms/"><b>geeksforgeeks.org</b></a></td>
+    </tr>
+    <tr>
+    <tr>
+      <td><p>◌ <b>Recursion and Backtracking</b></p></td>
+      <td><a target="_blank" href="https://codeforces.com/blog/entry/118843"><b>codeforces.com</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Backtracking:the essential part of dynamic programming</b></p></td>
+      <td><a target="_blank" href="https://codeforces.com/blog/entry/102888"><b>codeforces.com</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Backtracking, Memoization & Dynamic Programming!</b></p></td>
+      <td><a target="_blank" href="https://loveforprogramming.quora.com/Backtracking-Memoization-Dynamic-Programming"><b>loveforprogramming.quora.com</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Backtracking Archives</b></p></td>
+      <td><a target="_blank" href="https://www.geeksforgeeks.org/category/dsa/algorithm/backtracking/"><b>geeksforgeeks.org</b></a></td>
+    </tr>
+  </tbody>
+</table>
+</details>
+
+<details open>
+  <summary><b>Practice Problems: Backtracking</b></summary>
+  <table>
+  <tbody>
+  <tr>
+      <td><p>◌ <b>Leetcode: Interview Practice</b></p></td>
+      <td><a target="_blank" href="https://leetcode.com/tag/backtracking/"><b>Leetcode: Practice Backtracking</b></a></td>
+    </tr>
+  </tbody>
+</table>
+</details>
+
+[**Back To Top ⬆️**](#index)
+
+## 3.14 Dynamic Programming
+
+Dynamic Programming stands as a crucial algorithm, serving as an optimization over plain recursion. It becomes particularly valuable when a recursive solution involves repeated calls for the same inputs, allowing for optimization.
+
+<!-- img -->
+
+> Those who cannot remember the past are condemned to repeat it.
+> </br> <div align="right">- <i>Dynamic Programming</i><div>
+
+Key concepts to explore in Dynamic Programming:
+
+- **Tabulation vs Memoization**
+- **Optimal Substructure Property**
+- **Overlapping Subproblems Property**
+- **Bitmasking and Dynamic Programming**
+- **Bitmasking and Dynamic Programming**
+- **Digit DP**
+
+### Basic DP
+
+<details open>
+  <summary><b>Resources: Basic Dynamic Programming</b></summary>
+  <table>
+  <tbody>
+    <tr>
+      <td><p>◌ <b>Demystifying Dynamic Programming</b></p></td>
+      <td><a target="_blank" href="https://www.freecodecamp.org/news/demystifying-dynamic-programming-3efafb8d4296"><b>freecodecamp.org</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>DP Tutorial and Problem List</b></p></td>
+      <td><a target="_blank" href="https://codeforces.com/blog/entry/67679"><b>codeforces.com</b></a></td>
+    </tr>
+    <tr>
+    <tr>
+      <td><p>◌ <b>DYNAMIC PROGRAMMING: FROM NOVICE TO ADVANCED</b></p></td>
+      <td><a target="_blank" href="https://www.topcoder.com/thrive/articles/Dynamic%20Programming:%20From%20Novice%20to%20Advanced"><b>topcoder.com</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Dynamic Programming</b></p></td>
+      <td><a target="_blank" href="https://www.geeksforgeeks.org/dynamic-programming/"><b>geeksforgeeks.org</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Backtracking, Memoization & Dynamic Programming!</b></p></td>
+      <td><a target="_blank" href="https://loveforprogramming.quora.com/Backtracking-Memoization-Dynamic-Programming"><b>loveforprogramming.quora.com</b></a></td>
+    </tr>
+  </tbody>
+</table>
+</details>
+
+<details open>
+  <summary><b>Practice Problems: Basic Dynamic Programming</b></summary>
+  <table>
+  <tbody>
+    <tr>
+      <td><p>◌ <b>Alternating subarray prefix</b></p></td>
+      <td><a target="_blank" href="https://www.codechef.com/problems/ALTARAY"><b>codechef.com: ALTARAY</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Subtraction Game 2</b></p></td>
+      <td><a target="_blank" href="https://www.codechef.com/problems/AMSGAME2"><b>codechef.com: AMSGAME2</b></a></td>
+    </tr>
+    <tr>
+      <td><p>◌ <b>Striver DP Series</b></p></td>
+      <td><a target="_blank" href="https://takeuforward.org/dynamic-programming/striver-dp-series-dynamic-programming-problems/"><b>takeuforward.org</b></a></td>
+    </tr>
+    <tr>
+    <tr>
+      <td><p>◌ <b>Leetcode: Interview Practice</b></p></td>
+      <td><a target="_blank" href="https://leetcode.com/tag/dynamic-programming/"><b>Leetcode: Practice Dynamic Programming</b></a></td>
+    </tr>
+  </tbody>
+</table>
+</details>
+
+
 ## CHEAT SHEET FOR TIME AND SPACE COMPLEXITIES:
 https://www.bigocheatsheet.com/
