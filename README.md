@@ -297,4 +297,6 @@ function merge(leftHalf, rightHalf):
 * Worst case: O(n log n)
 ### Space Complexity
 * O(n)
-  
+
+## CHEAT SHEET FOR TIME AND SPACE COMPLEXITIES:
+https://www.bigocheatsheet.com/
