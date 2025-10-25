@@ -9,8 +9,11 @@ Hi everyone this github is here with all the different data structures of DSA,th
 ## BEST DSA Playlist  ( you can choose any one of them)
 
 1.) Striver's A2Z DSA Course/Playlist: [Striver's A2Z DSA Course/Playlist](https://www.youtube.com/playlist?list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz)
+
 2.) Kunal Kushwaha's DSA Playlist (Java):[Kunal's Playlist](https://www.youtube.com/playlist?list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ)
+
 3.) Love Babbar's(C++): [Love Babbar's Playlist](https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA)
+
 4.) Apna College/Apni Kaksha Playlists (C++ and Java): [Apna College Playlist](https://www.youtube.com/playlist?list=PLfqMhTWNBTe137I_EPQd34TsgV6IO55pt)
 
 
